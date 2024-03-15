@@ -3,14 +3,14 @@ const path = require('path');
 const fs = require('fs');
 const util = require('util');
 
-const sourceFolderPath = 'D:/CodingPractise/angularWebpluginTest/cordova.js';
-const destinationFolderPath = 'D:/CodingPractise/angularWebpluginTest/dist/angular-webplugin-test/browser/cordova.js';
+const sourceFolderPath = './cordova/cordova.js';
+const destinationFolderPath = './dist/angular-webplugin-test/browser/cordova.js';
 
-const sourceFolderPathCordovaPlugins = 'D:/CodingPractise/angularWebpluginTest/cordova_plugins.js';
-const destinationFolderPathCordovaPlugins = 'D:/CodingPractise/angularWebpluginTest/dist/angular-webplugin-test/browser/cordova_plugins.js';
+const sourceFolderPathCordovaPlugins = './cordova/cordova_plugins.js';
+const destinationFolderPathCordovaPlugins = './dist/angular-webplugin-test/browser/cordova_plugins.js';
 
-const srcDir = `D:/CodingPractise/angularWebpluginTest/plugins`;
-const destDir = `D:/CodingPractise/angularWebpluginTest/dist/angular-webplugin-test/browser/plugins`;
+const srcDir = `./plugins`;
+const destDir = `./dist/angular-webplugin-test/browser/plugins`;
 
 
 fs.copyFile(sourceFolderPath, destinationFolderPath, (err) => {
@@ -27,6 +27,6 @@ fs.cp(srcDir, destDir, { recursive: true }, (err) => {
     if (err) {
         console.error(err);
     } else {
-        console.log('Folder moved!')
+        console.log('Plugins Folder moved!')
     }
 })
